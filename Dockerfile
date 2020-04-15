@@ -1,13 +1,14 @@
 FROM ruby:2.6.5-alpine3.11
 
 RUN apk update && apk upgrade && apk add --no-cache \
-      bash=5.0.11-r1                                \
-      build-base=0.5-r1                             \
-      git=2.24.1-r0                                 \
-      nodejs=12.15.0-r1                             \
-      npm=12.15.0-r1                                \
-      postgresql-dev=12.2-r0                        \
-      yarn=1.19.2-r0                                \
+      bash \
+      build-base \
+      git \
+      nodejs \
+      npm \
+      postgresql-dev \
+      yarn \
     && rm -rf /var/cache/apk/*
 
-RUN gem install rails -v 6.0.2.2
+RUN gem install bundler -v 2.1.4 && \
+    gem install rails -v 6.0.2.2
