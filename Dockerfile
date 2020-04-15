@@ -1,4 +1,4 @@
-FROM ruby:2.6.6-alpine3.11
+FROM ruby:2.6.5-alpine3.11
 
 RUN apk update && apk upgrade && apk add --no-cache \
       bash=5.0.11-r1                                \
