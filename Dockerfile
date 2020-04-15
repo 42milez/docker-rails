@@ -10,5 +10,4 @@ RUN apk update && apk upgrade && apk add --no-cache \
       yarn \
     && rm -rf /var/cache/apk/*
 
-RUN gem install bundler -v 2.1.4 && \
-    gem install rails -v 6.0.2.2
+RUN gem install rails -v 6.0.2.2
