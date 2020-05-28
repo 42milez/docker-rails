@@ -1,4 +1,4 @@
-FROM ruby:2.6.5-alpine3.11
+FROM ruby:2.6.6-alpine3.11
 
 RUN apk update && apk upgrade && apk add --no-cache \
       bash \
@@ -11,4 +11,4 @@ RUN apk update && apk upgrade && apk add --no-cache \
     && rm -rf /var/cache/apk/*
 
 RUN gem install bundler -v 2.1.4 && \
-    gem install rails -v 6.0.2.2
+    gem install rails -v 6.0.3.1
